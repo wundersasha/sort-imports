@@ -1,27 +1,28 @@
-package imports
+# Test file example
+
+Here provided the test `go` file example with mashed imports (including edge cases 
+like dot imports, side-effect imports, import aliases).
+
+```go
+package main
 
 import (
 	"fmt"
 	"log"
-	. "math"
-	_ "net/http/pprof"
 	"os"
 	"time"
 
 	"github.com/google/uuid"
-	pretty "github.com/kr/pretty"
 
-	"github.com/wundersasha/sort-imports/utils"
+	. "math" // Dot import for direct access to exported identifiers
+	_ "net/http/pprof" // Side-effect import for automatically registering pprof handlers
+
+	pretty "github.com/kr/pretty" // External package with alias
+
+	"github.com/wundersasha/sort-imports/utils" // Internal package
 )
 
-// Dot import for direct access to exported identifiers
-// Side-effect import for automatically registering pprof handlers
-
-// External package with alias
-
-// Internal package
-
-func someFunc() {
+func main() {
 	// Using a standard library import
 	fmt.Println("Starting the program...")
 
@@ -47,3 +48,4 @@ func someFunc() {
 	fmt.Println("Exiting the program...")
 	os.Exit(0)
 }
+```
