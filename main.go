@@ -35,7 +35,7 @@ func isStdLib(importPath string) bool {
 
 // isInternal checks whether the import is internal for the specific project.
 func isInternal(importPath, internalPath string) bool {
-	return strings.HasPrefix(importPath, internalPath)
+	return strings.HasPrefix(importPath, strings.Trim(internalPath, "\""))
 }
 
 // addSortedImportsToAST adds the sorted imports to abstract syntax tree.
