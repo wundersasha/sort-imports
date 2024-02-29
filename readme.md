@@ -65,7 +65,7 @@ Integrate sort-imports with GoLand by setting up a File Watcher that automatical
    * **Program**: Specify the path to the `sort-imports` executable. If you've installed it via `go install`, 
    it should be in your `$GOPATH/bin` directory. You can find the exact path by running `which sort-imports` (**Unix**) 
    or `where sort-imports` (**Windows**) in your terminal.
-   * **Arguments**: Enter $FilePath$ to pass the current file path to the sort-imports tool.
+   * **Arguments**: Enter `$FilePath$` to pass the current file path to the sort-imports tool.
    * **Output paths**: Leave this field empty, as `sort-imports` modifies the file in place.
    * **Working directory**: Use `$ProjectFileDir$` to ensure the tool runs in the context of your project directory.
    * In the **Advanced Options** section, adjust the settings according to your preferences. It's recommended 
