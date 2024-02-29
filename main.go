@@ -180,7 +180,7 @@ func main() {
 
 	formattedCode := buf.String()
 	// Replace the newline placeholders with actual newlines.
-	formattedCodeWithNewlines := strings.Replace(formattedCode, newLinePlaceholder, "\n", -1)
+	formattedCodeWithNewlines := strings.Replace(formattedCode, newLinePlaceholder, "", -1)
 
 	if err := os.WriteFile(filename, []byte(formattedCodeWithNewlines), 0644); err != nil {
 		fmt.Printf("Error writing file: %s\n", err)
