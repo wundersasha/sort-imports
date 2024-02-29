@@ -68,9 +68,12 @@ Integrate sort-imports with GoLand by setting up a File Watcher that automatical
    * **Arguments**: Enter `$FilePath$` to pass the current file path to the sort-imports tool.
    * **Output paths**: Leave this field empty, as `sort-imports` modifies the file in place.
    * **Working directory**: Use `$ProjectFileDir$` to ensure the tool runs in the context of your project directory.
+   * **Environment variables**: Set `GO_INTERNAL_PATH` environment variable here to ensure the tool would work correctly.
    * In the **Advanced Options** section, adjust the settings according to your preferences. It's recommended 
    to check **Auto-save edited files to trigger the watcher** for seamless integration.
 5. Click **OK** or **Apply** to save the new **File Watcher**.
+6. It is recommended to use **Project** scope for this **File Watcher** to ensure the `GO_INTERNAL_PATH` environment
+variable is specific for every single project.
 
 With the **File Watcher** set up, `sort-imports` will automatically run every time you save a Go file in GoLand, 
 sorting the import statements according to the predefined rules.
