@@ -1,0 +1,54 @@
+# Compiled Object files, Static and Dynamic libs (Shared Objects)
+*.o
+*.a
+*.so
+*.dylib
+*.dll
+*.exe
+# Compiled executable binaries
+/bin/
+/pkg/
+
+# Output of the go coverage tool
+*.cover
+
+# Dependency directories (remove the comment below if you want to check in your vendor directory)
+# /vendor/
+
+# JetBrains IDEs (.idea)
+.idea/
+
+# Visual Studio Code (.vscode)
+.vscode/
+
+# macOS specific files
+.DS_Store
+
+# Windows specific files
+Thumbs.db
+ehthumbs.db
+
+# Linux specific files
+*.swp
+*~
+
+# Certificate files
+*.pem
+
+# Log files
+*.log
+
+# Environment variables file
+.env
+.env.local
+
+# Node.js modules (if using with frontend projects)
+/node_modules/
+
+# Python virtual environments (if using with Python scripts)
+/venv/
+*.pyc
+
+# Other files and folders to ignore
+/tmp
+/temp
